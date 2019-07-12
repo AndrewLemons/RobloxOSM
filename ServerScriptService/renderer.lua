@@ -1,8 +1,10 @@
 local httpService = game:GetService("HttpService")
-local opapi = require(script.Parent.OverpassApi)
-local partDisplay = require(script.Parent.PartDisplay)
-local stylesheet = require(script.Parent.Stylesheet)
-local hex2rgb = require(script.Parent.HexColorSupport)
+local sss = game:GetService("ServerScriptService")
+
+local opapi = require(sss.Modules.OverpassApi)
+local partDisplay = require(sss.Modules.PartDisplay)
+local stylesheet = require(sss.Modules.Stylesheet)
+local hex2rgb = require(sss.Modules.HexColorSupport)
 
 local loadRange = .01
 local lon = -73.988397
