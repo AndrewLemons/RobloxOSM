@@ -58,20 +58,20 @@ for a, way in pairs(mapWays) do --Loop through all nodes
 	
 	local style = stylesheet.getStyle(tags)
 
-	for b, node in pairs(wayNodes) do
+	for b, node in pairs(nodes) do
 		if b%delayCount then wait() end --Wait every delayCount nodes
 		
 		local partA = game.Workspace.Nodes:FindFirstChild(node) --PartA is always the current node
 		local partB
 		
 		--Find out what PartB is
-		if b ~= #wayNodes+1 then --If B is still in the array
-			partB = game.Workspace.Nodes:FindFirstChild(wayNodes[b+1]) --Get the next node
+		if b ~= #nodes+1 then --If B is still in the array
+			partB = game.Workspace.Nodes:FindFirstChild(nodes[b+1]) --Get the next node
 		else --If B is the last node
 			if style.loops then --If B is not in the array
-				partB = game.Workspace.Nodes:FindFirstChild(wayNodes[1]) --Get the first node
+				partB = game.Workspace.Nodes:FindFirstChild(nodes[1]) --Get the first node
 			else
-				partB = game.Workspace.Nodes:FindFirstChild(wayNodes[a]) --Get PartA as PartB
+				partB = game.Workspace.Nodes:FindFirstChild(nodes[a]) --Get PartA as PartB
 			end
 		end
 		
