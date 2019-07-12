@@ -1,8 +1,8 @@
 local httpService = game:GetService("HttpService")
 local sss = game:GetService("ServerScriptService")
 
-local opapi = require(sss.Modules.OverpassApi)
-local partDisplay = require(sss.Modules.PartDisplay)
+local opapi = require(sss.Modules.OverpassAPI)
+local partDisplay = require(sss.Modules.PartDisplaySystem)
 local stylesheet = require(sss.Modules.Stylesheet)
 local hex2rgb = require(sss.Modules.HexColorSupport)
 
